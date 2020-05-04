@@ -11,11 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="seedsSearch.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <script src="filterSeeds.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,8 @@
       <li><a href="#"><span class="form-group"></span> <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Username"></a></li>
       <li><a href="#"><span class="form-group"></span> <input type="password" class="form-control" id="inputPassword" placeholder="Password"></a></li>
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li onclick="window.location.href = 'file:///Users/Mac/github/It-ll-Be-Something/CS230/login.html';"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <!--<li onclick="window.location.href = 'file:///Users/Mac/github/It-ll-Be-Something/CS230/login.html';">-->
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Export Seed Order</a></li>
 
     </ul>
@@ -52,21 +54,25 @@
     </div>
 
     <div class="col-sm-6 pt-3" style="text-align: center">
-
+      <!--<h1 class="text-hide" style="background-image: url('assets/empty-grid-component.png'); width: 50px; height: 50px;">GridComponent</h1>-->
+      <img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what">
     </div>
 
     <div class="col-sm-4 pt-3" style="text-align: center">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Seeds <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Sunflower</a></li>
-          <li><a href="#">Rose</a></li>
-          <li><a href="#">Tulip</a></li>
-          <li><a href="#">Normal</a></li>
-          <li><a href="#">Dahlia</a></li>
-          <li><a href="#">Daffodil</a></li>
-          <li><a href="#">Tulip</a></li>
-        </ul>
+      <div class="dropdown" style="display: inline-block">
+        <button class="btn btn-default dropdown-toggle" onclick="filter()" type="button" data-toggle="dropdown">
+          Seeds <span class="caret"></span>
+        </button>
+        <div id="seedDropdown" class="dropdown-content">
+          <input class="form-control" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href="#">Sunflower</a>
+            <a href="#">Rose</a>
+            <a href="#">Tulip</a>
+            <a href="#">Normal</a>
+            <a href="#">Dahlia</a>
+            <a href="#">Daffodil</a>
+            <a href="#">Tulip</a>
+        </div>
       </div>
     </div>
   </div>
