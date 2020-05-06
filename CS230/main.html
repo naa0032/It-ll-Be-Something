@@ -16,6 +16,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="filterSeeds.js"></script>
   <script src="updateTable.js"></script>
   <script src="moveSeeds.js"></script>
@@ -38,8 +40,8 @@
       <li class="active"; onclick="window.location.href = 'login.html';"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li class="active"; onclick="window.location.href = 'login.html';"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Seed Checkout</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-floppy-disk"></span> Save Garden</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-open"></span> Share Garden</a></li>
+      <li><a href="#" onclick="saveGarden()"><span class="glyphicon glyphicon-floppy-disk"></span> Save Garden</a></li>
+      <li><a href="#" onclick="shareGarden()"><span class="glyphicon glyphicon-open"></span> Share Garden</a></li>
 
     </ul>
     </div>
@@ -53,13 +55,35 @@
 
       <h3>Garden Details</h3>
       <p>Shows details of the garden (cost, totals for seeds, etc.)</p>
-      <button class="btn btn-outline-default" onclick="addRow()">Add Row</button>
-      <button class="btn btn-outline-default" onclick="deleteRow()">Delete Row</button>
       <button class="btn btn-outline-default" onclick="">Select Template</button>
       <button class="btn btn-outline-default" onclick="">Create Template</button>
-      <button class="btn btn-outline-default" onclick="">Resize</button>
+      <!-- <div class="dropdown" style="display: inline-block">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+          Resize <span class="caret"></span>
+        </button>
+        <div id="resizeDropdown" class="dropdown-content">
+            <a href="#">400X300</a>
+            <a href="#">200X300</a>
+            <a href="#">400X200</a>
+            <a href="#">200X100</a>
+            <a href="#">100X400</a>
+            <a href="#">360X420</a>
+        </div>
+      </div> -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Resize <span class="caret"></span>
+        </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="resize-item" id="resize1" type="button" onclick="resize1()">500X400</button>
+            <button class="resize-item" id="resize2" type="button" onclick="resize2()">400X400</button>
+            <button class="resize-item" id="resize3" type="button" onclick="resize3()">300X200</button>
+            <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal()">Original</button>
+          </div>
+        </div>
+
       <button class="btn btn-outline-default" onclick="">Unit Scale</button>
-      <button class="btn btn-outline-default" onclick="">Change Climate</button>
+      <button class="btn btn-outline-default">Change Climate</button>
 
       <p>Garden Cost: $9000.01</p>
       <p>Total Seeds Purchased: 100</p>
@@ -68,24 +92,34 @@
 
     <div class="col-sm-6 pt-3" style="text-align: center">
       <!--<h1 class="text-hide" style="background-image: url('assets/empty-grid-component.png'); width: 50px; height: 50px;">GridComponent</h1>-->
-      <table class="table table-bordered" id="gardenGrid">
+      <!-- <table class="table table-bordered" id="gardenGrid">
         <tbody>
           <tr>
-            <!--th scope="row"></th-->
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
           </tr>
           <tr>
-            <!--th scope="row"></th-->
             <td><img src="assets/empty-grid-component.png" class="droppable" alt="Something goes here and IDK what"></td>
             <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
             <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
             <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
           </tr>
       </tbody>
-      </table>
+      </table> -->
+      <canvas id='canvas' width='600' height='360' style="border: 1px solid black;">
+      </canvas>
+
+      <div id="seedcontainer" style="margin-top: 60px">
+      <div id="seeds">
+        <img class="seed" src="assets/Daffodil.png" alt="Sunflower">
+        <img class="seed" src="assets/Dahlia.png" alt="Sunflower">
+        <img class="seed" src="assets/Rose.png" alt="Sunflower">
+        <img class="seed" src="assets/Sunflower.png" alt="Sunflower">
+        <img class="seed" src="assets/Tulip.png" alt="Sunflower">
+    </div>
+    </div>
 
     </div>
 
@@ -153,12 +187,6 @@
       </tbody>
     </table>
 
-    <div class="card" style="width: 18rem;" id="seed">
-      <img class="card-img-top" src="assets/Daffodil.png" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text">Sunflower</p>
-      </div>
-    </div>
   </div>
   </div>
 </div>
