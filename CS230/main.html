@@ -17,6 +17,7 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="filterSeeds.js"></script>
+  <script src="updateTable.js"></script>
 </head>
 
 <body>
@@ -27,14 +28,13 @@
         <a class="navbar-brand" href="#">ACME Seeds</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"; onclick="window.location.href = 'file:///Users/Mac/github/It-ll-Be-Something/CS230/main2.html';"><a href="#">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="form-group"></span> <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Username"></a></li>
       <li><a href="#"><span class="form-group"></span> <input type="password" class="form-control" id="inputPassword" placeholder="Password"></a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <!--<li onclick="window.location.href = 'file:///Users/Mac/github/It-ll-Be-Something/CS230/login.html';">-->
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Export Seed Order</a></li>
 
     </ul>
@@ -48,17 +48,35 @@
     <div class="col-sm-2 pt-3" style="text-align: center">
 
       <h3>Garden Details</h3>
-
       <p>Shows details of the garden (cost, totals for seeds, etc.)</p>
+      <button class="btn btn-outline-warning" onclick="addRow()">Add Row</button>
 
     </div>
 
     <div class="col-sm-6 pt-3" style="text-align: center">
       <!--<h1 class="text-hide" style="background-image: url('assets/empty-grid-component.png'); width: 50px; height: 50px;">GridComponent</h1>-->
-      <img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what">
+      <table class="table table-bordered" id="gardenGrid">
+        <tbody>
+          <tr>
+            <!--th scope="row"></th-->
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+          </tr>
+          <tr>
+            <!--th scope="row"></th-->
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
+          </tr>
+      </tbody>
+      </table>
+
     </div>
 
-    <div class="col-sm-4 pt-3" style="text-align: center">
+    <div class="col-sm-4 pt-3" style="text-align: center;">
       <div class="dropdown" style="display: inline-block">
         <button class="btn btn-default dropdown-toggle" onclick="filter()" type="button" data-toggle="dropdown">
           Seeds <span class="caret"></span>
@@ -71,9 +89,56 @@
             <a href="#">Normal</a>
             <a href="#">Dahlia</a>
             <a href="#">Daffodil</a>
-            <a href="#">Tulip</a>
         </div>
       </div>
+      <div class="dropdown-climate" style="display: inline-block">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+          Climate <span class="caret"></span>
+        </button>
+        <div id="climateDropdown" class="dropdown-content">
+        <!--<input class="form-control" type="text" placeholder="Search.." id="climateForm" onkeyup="filterFunction()">-->
+            <a href="#">Temperate</a>
+            <a href="#">Cold</a>
+            <a href="#">Dry</a>
+            <a href="#">Wet</a>
+        </div>
+      </div>
+      <table class="calendartable table-bordered" style="margin-top: 50px">
+        <tbody>
+          <tr>
+            <!--th scope="row"></th-->
+            <th colspan="4" style="text-align: center"><p>Calendar Reference</p></th>
+          </tr>
+          <tr>
+            <!--th scope="row"></th-->
+            <td><p>Jan-Mar</p></td>
+            <td><p>Apr-Jun</p></td>
+            <td><p>Jul-Sept</p></td>
+            <td><p>Oct-Dec</p></td>
+          </tr>
+          <tr>
+            <!--th scope="row"></th-->
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+          </tr>
+          <tr>
+            <!--th scope="row"></th-->
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+          </tr>
+          <tr>
+            <!--th scope="row"></th-->
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+            <td><p>Strawberries grow best from January to February</p></td>
+          </tr>
+      </tbody>
+    </table>
     </div>
   </div>
 </div>
