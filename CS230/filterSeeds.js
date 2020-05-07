@@ -114,6 +114,114 @@ function resizeOriginal() {
     context.stroke();
 }
 
+function changeUnit1() {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    width = canvas.width;
+    height = canvas.height;
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = width;
+    canvas.height = height;
+
+
+    for(var x=0.5;x<width;x+=30) {
+      context.moveTo(x,0);
+      context.lineTo(x,height);
+    }
+
+    for(var y=0.5; y<height; y+=30) {
+      context.moveTo(0,y);
+      context.lineTo(width,y);
+
+  }
+
+    context.strokeStyle='grey';
+    context.stroke();
+}
+
+function changeUnit2() {
+  var canvas = document.getElementById("canvas");
+  var context = canvas.getContext("2d");
+
+  width = canvas.width;
+  height = canvas.height;
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.width = width;
+  canvas.height = height;
+
+
+  for(var x=0.5;x<width;x+=60) {
+    context.moveTo(x,0);
+    context.lineTo(x,height);
+  }
+
+  for(var y=0.5; y<height; y+=60) {
+    context.moveTo(0,y);
+    context.lineTo(width,y);
+
+}
+
+  context.strokeStyle='grey';
+  context.stroke();
+}
+
+function changeUnit3() {
+  var canvas = document.getElementById("canvas");
+  var context = canvas.getContext("2d");
+
+  width = canvas.width;
+  height = canvas.height;
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.width = width;
+  canvas.height = height;
+
+
+  for(var x=0.5;x<width;x+=120) {
+    context.moveTo(x,0);
+    context.lineTo(x,height);
+  }
+
+  for(var y=0.5; y<height; y+=120) {
+    context.moveTo(0,y);
+    context.lineTo(width,y);
+
+}
+
+  context.strokeStyle='grey';
+  context.stroke();
+}
+
+function changeUnitOriginal() {
+  var canvas = document.getElementById("canvas");
+  var context = canvas.getContext("2d");
+
+  width = canvas.width;
+  height = canvas.height;
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.width = width;
+  canvas.height = height;
+
+
+  for(var x=0.5;x<width;x+=20) {
+    context.moveTo(x,0);
+    context.lineTo(x,height);
+  }
+
+  for(var y=0.5; y<height; y+=20) {
+    context.moveTo(0,y);
+    context.lineTo(width,y);
+
+}
+
+  context.strokeStyle='grey';
+  context.stroke();
+}
+
 function filter() {
   document.getElementById("seedDropdown").classList.toggle("show");
 }

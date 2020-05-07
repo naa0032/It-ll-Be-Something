@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>ACME Seeds</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="seedsSearch.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ACME Seeds</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="main.html">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" -->
+        <li class="active"><a href="#">Other Gardens</a></li> <!-- ; onclick="window.location.href = 'freshStart.html';" -->
+        <!-- <li class="active"; onclick="window.location.href = 'freshStart.html';"><a href="#">Create New</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+    </div>
+  </nav>
+  <h5>Registered accounts may rate and comment.</h5>
+  <div class="images-shared-container" style="display: grid; grid-template-columns: 300px 300px 300px 300px; grid-gap: 10px;">
+    <div class="shared-img1">
+      <img class="seed" src="assets/gardenshared1.png" width="300" height="200" alt="user1's garden">
+      <div class="comment-users" style="display: inline-block">
+        <a>User says: "This garden is great!"</a>
+        <button onclick="alert('Comment reported')">Report</button>
+      </div>
+      <form action="#" method="post">
+        <label for="Rating">Rate (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <textarea rows="4" cols="35">Place comments here</textarea>
+        <input type="submit" value="Submit" onclick="alert('Rating submitted')">
+      </form>
+    </div>
+    <div class="shared-img2">
+      <img class="seed" src="assets/gardenshared2.png" width="300" height="200" alt="user1's garden">
+    </div>
+  </div>

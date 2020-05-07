@@ -32,7 +32,8 @@
         <a class="navbar-brand" href="#">ACME Seeds</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" --> 
+        <li class="active"><a href="#">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" -->
+        <li class="active"><a href="sharedGardens.html">Other Gardens</a></li> <!-- ; onclick="window.location.href = 'freshStart.html';" -->
         <!-- <li class="active"; onclick="window.location.href = 'freshStart.html';"><a href="#">Create New</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -55,9 +56,18 @@
     <div class="col-sm-2 pt-3" style="text-align: center">
 
       <h3>Garden Details</h3>
-      <p>Shows details of the garden (cost, totals for seeds, etc.)</p>
-      <button class="btn btn-outline-default" onclick="">Select Template</button>
-      <button class="btn btn-outline-default" onclick="">Create Template</button>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuTemplate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Select Template <span class="caret"></span>
+        </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuTemplate">
+            <button class="resize-item" id="resize1" type="button" onclick="resize3(); changeUnit1()">Micro</button>
+            <button class="resize-item" id="resize2" type="button" onclick="resize1(); changeUnit4()">Big</button>
+            <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal(); changeUnitOriginal()">Original</button>
+          </div>
+        </div>
+
       <!-- <div class="dropdown" style="display: inline-block">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
           Resize <span class="caret"></span>
@@ -71,23 +81,53 @@
             <a href="#">360X420</a>
         </div>
       </div> -->
+  <table class="table table-dark">
+    <tbody>
+      <tr><td><button class="btn btn-outline-default" onclick="alert('Template Created!')">Create Template</button></td></tr>
+      <tr><td>
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Resize <span class="caret"></span>
         </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="resize-item" id="resize1" type="button" onclick="resize1()">500X400</button>
-            <button class="resize-item" id="resize2" type="button" onclick="resize2()">400X400</button>
-            <button class="resize-item" id="resize3" type="button" onclick="resize3()">300X200</button>
+            <button class="resize-item" id="resize1" type="button" onclick="resize1()">50ftX40ft</button>
+            <button class="resize-item" id="resize2" type="button" onclick="resize2()">40ftX40ft</button>
+            <button class="resize-item" id="resize3" type="button" onclick="resize3()">30ftX20ft</button>
             <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal()">Original</button>
           </div>
         </div>
+      </td></tr>
+      <tr><td>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Unit Scale <span class="caret"></span>
+          </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="resize-item" id="resize1" type="button" onclick="changeUnit1()">1ft</button>
+              <button class="resize-item" id="resize2" type="button" onclick="changeUnit2()">2ft</button>
+              <button class="resize-item" id="resize3" type="button" onclick="changeUnit3()">4ft</button>
+              <button class="resize-item" id="resize3" type="button" onclick="changeUnitOriginal()">Original</button>
+            </div>
+          </div>
+        </td></tr>
+        <tr><td>
+      <div class="dropdown" style="display: inline-block">
+        <button class="btn btn-default dropdown-toggle" onclick="climateSelection()" type="button" data-toggle="dropdown">
+          Climate <span class="caret"></span>
+        </button>
+        <div id="climateDropdown" class="dropdown-content">
+            <a href="#" onclick="alert('Climate changed to temperate')">Temperate</a>
+            <a href="#" onclick="alert('Climate changed to cold')">Cold</a>
+            <a href="#" onclick="alert('Climate changed to dry')">Dry</a>
+            <a href="#" onclick="alert('Climate changed to wet')">Wet</a>
+        </div>
+      </div>
+    </td></tr>
+    </tbody>
+  </table>
 
-      <button class="btn btn-outline-default" onclick="">Unit Scale</button>
-      <button class="btn btn-outline-default">Change Climate</button>
-
-      <p>Garden Cost: $9000.01</p>
-      <p>Total Seeds Purchased: 100</p>
+      <p>Garden Cost: <br>$9000.01</p>
+      <p>Total Seeds: <br>100</p>
 
     </div>
 
@@ -139,17 +179,8 @@
             <a href="#">Daffodil</a>
         </div>
       </div>
-      <div class="dropdown" style="display: inline-block">
-        <button class="btn btn-default dropdown-toggle" onclick="climateSelection()" type="button" data-toggle="dropdown">
-          Climate <span class="caret"></span>
-        </button>
-        <div id="climateDropdown" class="dropdown-content">
-            <a href="#">Temperate</a>
-            <a href="#">Cold</a>
-            <a href="#">Dry</a>
-            <a href="#">Wet</a>
-        </div>
-      </div>
+
+
       <table class="calendartable table-bordered" style="margin-top: 50px">
         <tbody>
           <tr>
@@ -186,7 +217,7 @@
           </tr>
       </tbody>
     </table>
-
+    <button class="btn btn-outline-default" onclick="window.location.href = 'calendar.html';">Go to Calendar</button>
   </div>
   </div>
 </div>
