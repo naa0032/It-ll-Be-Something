@@ -22,7 +22,7 @@
   <script src="updateTable.js"></script>
   <script src="moveSeeds.js"></script>
   <script src="climateControl.js"></script>
-  <s
+  <script src="seedDetails.js"></script>
 </head>
 
 <body>
@@ -133,23 +133,6 @@
     </div>
 
     <div class="col-sm-6 pt-3" style="text-align: center">
-      <!--<h1 class="text-hide" style="background-image: url('assets/empty-grid-component.png'); width: 50px; height: 50px;">GridComponent</h1>-->
-      <!-- <table class="table table-bordered" id="gardenGrid">
-        <tbody>
-          <tr>
-            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td ondrop="drop(event)"><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-          </tr>
-          <tr>
-            <td><img src="assets/empty-grid-component.png" class="droppable" alt="Something goes here and IDK what"></td>
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-            <td><img src="assets/empty-grid-component.png" class="rounded float-left" alt="Something goes here and IDK what"></td>
-          </tr>
-      </tbody>
-      </table> -->
       <canvas id='canvas' width='600' height='360' style="border: 1px solid black;">
       </canvas>
 
@@ -172,12 +155,11 @@
         </button>
         <div id="seedDropdown" class="dropdown-content">
           <input class="form-control" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-            <a href="#">Sunflower</a>
-            <a href="#">Rose</a>
-            <a href="#">Tulip</a>
-            <a href="#">Normal</a>
-            <a href="#">Dahlia</a>
-            <a href="#">Daffodil</a>
+          <a href="#" onclick=sunflowerDetails()>Sunflower</a>
+          <a href="#" onclick=roseDetails()>Rose</a>
+          <a href="#" onclick=tulipDetails()>Tulip</a>
+          <a href="#" onclick=dahliaDetails()>Dahlia</a>
+          <a href="#" onclick=daffodilDetails()>Daffodil</a>
         </div>
       </div>
 
@@ -185,11 +167,9 @@
       <table class="calendartable table-bordered" style="margin-top: 50px">
         <tbody>
           <tr>
-            <!--th scope="row"></th-->
             <th colspan="4" style="text-align: center"><p>Calendar Reference</p></th>
           </tr>
           <tr>
-            <!--th scope="row"></th-->
             <td><p>Jan-Mar</p></td>
             <td><p>Apr-Jun</p></td>
             <td><p>Jul-Sept</p></td>

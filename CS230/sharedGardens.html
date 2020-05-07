@@ -37,12 +37,18 @@
     </ul>
     </div>
   </nav>
+  <h5>Saved Gardens: </h5>
+  <img class="seed" src="assets/gardenshared1.png" width="300" height="200" alt="my garden">
   <h5>Registered accounts may rate and comment.</h5>
   <div class="images-shared-container" style="display: grid; grid-template-columns: 300px 300px 300px 300px; grid-gap: 10px;">
     <div class="shared-img1">
       <img class="seed" src="assets/gardenshared1.png" width="300" height="200" alt="user1's garden">
       <div class="comment-users" style="display: inline-block">
-        <a>User says: "This garden is great!"</a>
+        <p style="display: inline-block;">User says: "This garden is great!"</p>
+        <button onclick="alert('Comment reported')">Report</button>
+        <p style="display: inline-block;">User says: "This garden is s**t!"</p>
+        <button onclick="alert('Comment reported')">Report</button>
+        <p style="display: inline-block;">User says: "I like this one!"</p>
         <button onclick="alert('Comment reported')">Report</button>
       </div>
       <form action="#" method="post">
@@ -54,5 +60,19 @@
     </div>
     <div class="shared-img2">
       <img class="seed" src="assets/gardenshared2.png" width="300" height="200" alt="user1's garden">
+      <div class="comment-users" style="display: inline-block">
+        <p style="display: inline-block;">User says: "This garden is great!"</p>
+        <button onclick="alert('Comment reported')">Report</button>
+        <p style="display: inline-block;">User says: "This garden is s**t!"</p>
+        <button onclick="alert('Comment reported')">Report</button>
+        <p style="display: inline-block;">User says: "I like this one!"</p>
+        <button onclick="alert('Comment reported')">Report</button>
+      </div>
+      <form action="#" method="post">
+        <label for="Rating">Rate (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <textarea rows="4" cols="35">Place comments here</textarea>
+        <input type="submit" value="Submit" onclick="alert('Rating submitted')">
+      </form>
     </div>
   </div>
