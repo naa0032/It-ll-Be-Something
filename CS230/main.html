@@ -22,6 +22,7 @@
   <script src="updateTable.js"></script>
   <script src="moveSeeds.js"></script>
   <script src="climateControl.js"></script>
+  <script src="seedDetails.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <a class="navbar-brand" href="#">ACME Seeds</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" --> 
+        <li class="active"><a href="#">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" -->
         <!-- <li class="active"; onclick="window.location.href = 'freshStart.html';"><a href="#">Create New</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -131,12 +132,12 @@
         </button>
         <div id="seedDropdown" class="dropdown-content">
           <input class="form-control" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-            <a href="#">Sunflower</a>
-            <a href="#">Rose</a>
-            <a href="#">Tulip</a>
+            <a href="#" onclick=sunflowerDetails()>Sunflower</a>
+            <a href="#" onclick=roseDetails()>Rose</a>
+            <a href="#" onclick=tulipDetails()>Tulip</a>
             <a href="#">Normal</a>
-            <a href="#">Dahlia</a>
-            <a href="#">Daffodil</a>
+            <a href="#" onclick=dahliaDetails()>Dahlia</a>
+            <a href="#" onclick=daffodilDetails()>Daffodil</a>
         </div>
       </div>
       <div class="dropdown" style="display: inline-block">
@@ -186,7 +187,56 @@
           </tr>
       </tbody>
     </table>
-
+    <div style="display: none" id=sunflowerDetails>
+      <div class="card" onclick="sunflowerDetails()" style="width: 20rem;">
+        <img class="seed" src="assets/Sunflower.png" alt="Sunflower">
+        <div class="card-body">
+          <h5 class="card-title">Sunflower Seed</h5>
+          <p class="card-text">Sunflower seed details are in this text block Sunflower seed details are in this text block Sunflower seed details are in this text block Sunflower seed details are in this text block </p>
+          <a href="#" class="btn btn-primary">Plant</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id=roseDetails>
+      <div class="card" onclick="roseDetails()" style="width: 20rem;">
+        <img class="seed" src="assets/Rose.png" alt="Rose">
+        <div class="card-body">
+          <h5 class="card-title">Rose Seed</h5>
+          <p class="card-text">Rose seed details are in this text block</p>
+          <a href="#" class="btn btn-primary">Plant</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id=tulipDetails>
+      <div class="card" onclick="tulipDetails()" style="width: 20rem;">
+        <img class="seed" src="assets/Tulip.png" alt="Rose">
+        <div class="card-body">
+          <h5 class="card-title">Tulip Seed</h5>
+          <p class="card-text">Tulip seed details are in this text block</p>
+          <a href="#" class="btn btn-primary">Plant</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id=dahliaDetails>
+      <div class="card" onclick="dahliaDetails()" style="width: 20rem;">
+        <img class="seed" src="assets/dahlia.png" alt="Rose">
+        <div class="card-body">
+          <h5 class="card-title">Dahlia Seed</h5>
+          <p class="card-text">Dahlia seed details are in this text block</p>
+          <a href="#" class="btn btn-primary">Plant</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id=daffodilDetails>
+      <div class="card" onclick="daffodilDetails()" style="width: 20rem;">
+        <img class="seed" src="assets/Daffodil.png" alt="Rose">
+        <div class="card-body">
+          <h5 class="card-title">Daffodil Seed</h5>
+          <p class="card-text">Daffodil seed details are in this text block</p>
+          <a href="#" class="btn btn-primary">Plant</a>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 </div>
