@@ -3,16 +3,91 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="seedsSearch.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <title>Moderator</title>
   <link href="modstyle.css" rel="stylesheet" type="text/css" />
 </head>
-<h1>Moderator Portal</h1>
+
 <body>
 
-  <div class="btn-group">
-    <button>Manage Reports</button>
-    <button>Create Marketing Report</button>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ACME Seeds</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" --> <!-- ; onclick="window.location.href = 'freshStart.html';" -->
+        <!-- <li class="active"; onclick="window.location.href = 'freshStart.html';"><a href="#">Create New</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-home"></span> Visit Main Site</a></li>
+      <li class="active"; onclick="window.location.href = 'login.html';"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+    </div>
+  </nav>
+
+<div style="text-align: center; justify-content: center;">
+  <h1>Moderator Portal</h1>
+</div>
+
+  <div class="row">
+    <div class="col-sm-6" style="text-align: center; justify-content: center;">
+      <h3>Manage Reports</h3>
+    </div>
+    <div class="col-sm-6">
+      <div style="text-align: center; justify-content: center;">
+        <h3>Moderator Actions</h3>
+      </div>
+    </div>
   </div>
 
-  <body>
+<div class="row">
+<!--First Column-->
+    <div class="col-sm-6"  style="text-align: center; justify-content: center;">
+      <div class="btn-group">
+        <button class="btn btn-outline-primary" style="margin: 10px;" onclick="alert('Report Selected!')">Get Reports</button>
+      </div>
+      <div>
+        <p>Report #15324</p>
+        <p>Report #16788</p>
+        <p>Report #230</p>
+        <p>Report #124556</p>
+        <p>Report #235665</p>
+        <p>Report #1337</p>
+      </div>
+    </div>
+
+<!-- Second COLUMN -->
+<div class="col-sm-6" style="text-align: center; justify-content: center;">
+  <h3>Report ID: #87326582476</h3>
+  <p>User who Reported: </p>
+  <p>User in Question: </p>
+  <p>Date Generated: </p>
+  <p>Garden: </p>
+  <img class="seed" src="assets/gardenshared2.png" width="300" height="200" alt="user1's garden">
+  <p>Garden Code: </p>
+  <p>Garden Comment: This garden is ******* garbage!</p>
+
+    <div class="btn-group">
+      <button class="btn btn-outline-primary" onclick="alert('Report resolved.')">Mark Resolved</button>
+      <button class="btn btn-outline-primary" onclick="alert('Report ban submitted.')">Ban</button>
+      <button class="btn btn-outline-primary" onclick="alert('Report ignored.')">Ignore</button>
+    </div>
+</div>
+
+</div>
+
+
+</body>
 </html>

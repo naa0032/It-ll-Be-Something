@@ -3,22 +3,106 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="seedsSearch.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <title>Administrator</title>
   <link href="modstyle.css" rel="stylesheet" type="text/css" />
 </head>
-<h1>Admin Portal</h1>
+
 <body>
 
-  <div class="row">
-  <div class="column"></div>
-  <div class="column"></div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ACME Seeds</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li> <!-- ; onclick="window.location.href = 'main2.html';" --> <!-- ; onclick="window.location.href = 'freshStart.html';" -->
+        <!-- <li class="active"; onclick="window.location.href = 'freshStart.html';"><a href="#">Create New</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <!--<li><a href="#"><span class="form-group"></span> <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Username"></a></li>
+      <li><a href="#"><span class="form-group"></span> <input type="password" class="form-control" id="inputPassword" placeholder="Password"></a></li>-->
+      <!-- <li class="active"; onclick="window.location.href = 'main.html';"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      <!-- <li class="active"; onclick="window.location.href = 'login.html';"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+      <li><a href="#"><span class="glyphicon glyphicon-home"></span> Visit Main Site</a></li>
+      <li class="active"; onclick="window.location.href = 'login.html';"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+    </div>
+  </nav>
+
+<div style="text-align: center; justify-content: center;">
+  <h1>Admin Portal</h1>
 </div>
 
+<!-- FIRST COLUMN -->
+<div class="col-lg-4" style="text-align: center; justify-content: center;">
+  <table class="table table-dark">
+    <thead>
+      <tr><td><p>Include: </p></td></tr>
+    </thead>
+    <tbody>
+    <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Seed Query Statistics</label></input></td></tr>
+    <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Template Use Statistics</label></input></td></tr>
+    <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Types of Seeds Purchased</label></input></td></tr>
+    <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Amount of Seeds Purchased</label></input></td></tr>
+    <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Seed Selected/Seed Purchased ratio</label></input></td></tr>
+    <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Seeds purchased from garden creation</label></input></td></tr>
+
+  </tbody>
+</table>
   <div class="btn-group">
-    <button>Create Useage Report</button>
-    <button>Create Marketing Report</button>
+    <button class="btn btn-outline-primary" style="margin: 10px;" onclick="alert('Report Generated!')">Create Marketing Report</button>
   </div>
+</div>
 
+<!-- Second COLUMN -->
+<div class="col-lg-4" style="text-align: center; justify-content: center;">
+  <table class="table table-dark">
+    <thead>
+      <tr><td><p>Include: </p></td></tr>
+    </thead>
+    <tbody>
+      <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Number of user interactions</label></input></td></tr>
+      <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Queries</label></input></td></tr>
+      <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Saved gardens</label></input></td></tr>
+      <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Shared gardens</label></input></td></tr>
+      <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Gardens made per month</label></input></td></tr>
+      <tr><td><input type="checkbox" value="remember-me" style="color: #0000cc"><label>Seeds purchased from garden creation</label></input></td></tr>
 
+  </tbody>
+</table>
+    <div class="btn-group">
+      <button class="btn btn-outline-primary" style="margin: 10px;" onclick="alert('Report Generated!')">Create Usage Report</button>
+    </div>
+</div>
+
+<!-- Third COLUMN -->
+<div class="col-lg-4" style="text-align: center; justify-content: center;">
+    <h2>Preview and Publish</h2>
+    <h3>Marketing Report</h3>
+    <p>Report ID: #87326582476</p>
+    <p>Date Created:</p>
+    <p>Seed Query Statistics: </p>
+    <p>Template Use Statistics:</p>
+    <p>Garden Option Use Statistics:</p>
+    <p>Types of Seeds Purchased:</p>
+    <p>Amount of Seeds Purchased:</p>
+    <p>Seed Selected/Seed Purchased ratio:</p>
+
+    <div class="btn-group">
+      <button class="btn btn-outline-primary" style="margin: 10px;" onclick="alert('Report Submitted!')">Publish Report</button>
+    </div>
+</div>
   <body>
 </html>

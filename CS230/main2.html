@@ -50,206 +50,192 @@
     </div>
   </nav>
 
-<div class="container-fluid">
+  <div class="container-fluid">
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-sm-2 pt-3" style="text-align: center">
+      <div class="col-sm-2 pt-3" style="text-align: center">
 
-      <h3>Garden Details</h3>
+        <h3>Garden Details</h3>
 
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuTemplate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Template <span class="caret"></span>
-        </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuTemplate">
-            <button class="resize-item" id="resize1" type="button" onclick="resize3(); changeUnit1()">Micro</button>
-            <button class="resize-item" id="resize2" type="button" onclick="resize1(); changeUnit4()">Big</button>
-            <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal(); changeUnitOriginal()">Original</button>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuTemplate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Template <span class="caret"></span>
+          </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuTemplate">
+              <button class="resize-item" id="resize1" type="button" onclick="resize3(); changeUnit1()">Micro</button>
+              <button class="resize-item" id="resize2" type="button" onclick="resize1(); changeUnit4()">Big</button>
+              <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal(); changeUnitOriginal()">Original</button>
+            </div>
           </div>
-        </div>
-
-      <!-- <div class="dropdown" style="display: inline-block">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-          Resize <span class="caret"></span>
-        </button>
-        <div id="resizeDropdown" class="dropdown-content">
-            <a href="#">400X300</a>
-            <a href="#">200X300</a>
-            <a href="#">400X200</a>
-            <a href="#">200X100</a>
-            <a href="#">100X400</a>
-            <a href="#">360X420</a>
-        </div>
-      </div> -->
-  <table class="table table-dark">
-    <tbody>
-      <tr><td><button class="btn btn-outline-default" onclick="alert('Template Created!')">Create Template</button></td></tr>
-      <tr><td>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Resize <span class="caret"></span>
-        </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="resize-item" id="resize1" type="button" onclick="resize1()">50ftX40ft</button>
-            <button class="resize-item" id="resize2" type="button" onclick="resize2()">40ftX40ft</button>
-            <button class="resize-item" id="resize3" type="button" onclick="resize3()">30ftX20ft</button>
-            <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal()">Original</button>
-          </div>
-        </div>
-      </td></tr>
-      <tr><td>
+    <table class="table table-dark">
+      <tbody>
+        <tr><td><button class="btn btn-outline-default" onclick="alert('Template Created!')">Create Template</button></td></tr>
+        <tr><td>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Unit Scale <span class="caret"></span>
+            Resize <span class="caret"></span>
           </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="resize-item" id="resize1" type="button" onclick="changeUnit1()">1ft</button>
-              <button class="resize-item" id="resize2" type="button" onclick="changeUnit2()">2ft</button>
-              <button class="resize-item" id="resize3" type="button" onclick="changeUnit3()">4ft</button>
-              <button class="resize-item" id="resize3" type="button" onclick="changeUnitOriginal()">Original</button>
+              <button class="resize-item" id="resize1" type="button" onclick="resize1()">50ftX40ft</button>
+              <button class="resize-item" id="resize2" type="button" onclick="resize2()">40ftX40ft</button>
+              <button class="resize-item" id="resize3" type="button" onclick="resize3()">30ftX20ft</button>
+              <button class="resize-item" id="resize3" type="button" onclick="resizeOriginal()">Original</button>
             </div>
           </div>
         </td></tr>
         <tr><td>
-      <div class="dropdown" style="display: inline-block">
-        <button class="btn btn-default dropdown-toggle" onclick="climateSelection()" type="button" data-toggle="dropdown">
-          Climate <span class="caret"></span>
-        </button>
-        <div id="climateDropdown" class="dropdown-content">
-            <a href="#" onclick="alert('Climate changed to temperate')">Temperate</a>
-            <a href="#" onclick="alert('Climate changed to cold')">Cold</a>
-            <a href="#" onclick="alert('Climate changed to dry')">Dry</a>
-            <a href="#" onclick="alert('Climate changed to wet')">Wet</a>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Unit Scale <span class="caret"></span>
+            </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="resize-item" id="resize1" type="button" onclick="changeUnit1()">1ft</button>
+                <button class="resize-item" id="resize2" type="button" onclick="changeUnit2()">2ft</button>
+                <button class="resize-item" id="resize3" type="button" onclick="changeUnit3()">4ft</button>
+                <button class="resize-item" id="resize3" type="button" onclick="changeUnitOriginal()">Original</button>
+              </div>
+            </div>
+          </td></tr>
+          <tr><td>
+        <div class="dropdown" style="display: inline-block">
+          <button class="btn btn-default dropdown-toggle" onclick="climateSelection()" type="button" data-toggle="dropdown">
+            Climate <span class="caret"></span>
+          </button>
+          <div id="climateDropdown" class="dropdown-content">
+              <a href="#" onclick="alert('Climate changed to temperate')">Temperate</a>
+              <a href="#" onclick="alert('Climate changed to cold')">Cold</a>
+              <a href="#" onclick="alert('Climate changed to dry')">Dry</a>
+              <a href="#" onclick="alert('Climate changed to wet')">Wet</a>
+          </div>
         </div>
-      </div>
-    </td></tr>
-    </tbody>
-  </table>
-
-      <p>Garden Cost: <br>$9000.01</p>
-      <p>Total Seeds: <br>100</p>
-
-    </div>
-
-    <div class="col-sm-6 pt-3" style="text-align: center">
-      <canvas id='canvas' width='600' height='360' style="border: 1px solid black;">
-      </canvas>
-
-      <div id="seedcontainer" style="margin-top: 60px">
-      <div id="seeds">
-        <img class="seed" src="assets/Daffodil.png" alt="Sunflower">
-        <img class="seed" src="assets/Dahlia.png" alt="Sunflower">
-        <img class="seed" src="assets/Rose.png" alt="Sunflower">
-        <img class="seed" src="assets/Sunflower.png" alt="Sunflower">
-        <img class="seed" src="assets/Tulip.png" alt="Sunflower">
-    </div>
-    </div>
-
-    </div>
-
-    <div class="col-sm-4 pt-3" style="text-align: center;">
-      <div class="dropdown" style="display: inline-block">
-        <button class="btn btn-default dropdown-toggle" onclick="filter()" type="button" data-toggle="dropdown">
-          Seeds <span class="caret"></span>
-        </button>
-        <div id="seedDropdown" class="dropdown-content">
-          <input class="form-control" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-          <a href="#" onclick=sunflowerDetails()>Sunflower</a>
-          <a href="#" onclick=roseDetails()>Rose</a>
-          <a href="#" onclick=tulipDetails()>Tulip</a>
-          <a href="#" onclick=dahliaDetails()>Dahlia</a>
-          <a href="#" onclick=daffodilDetails()>Daffodil</a>
-        </div>
-      </div>
-
-
-      <table class="calendartable table-bordered" style="margin-top: 50px">
-        <tbody>
-          <tr>
-            <th colspan="4" style="text-align: center"><p>Calendar Reference</p></th>
-          </tr>
-          <tr>
-            <td><p>Jan-Mar</p></td>
-            <td><p>Apr-Jun</p></td>
-            <td><p>Jul-Sept</p></td>
-            <td><p>Oct-Dec</p></td>
-          </tr>
-          <tr>
-            <!--th scope="row"></th-->
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-          </tr>
-          <tr>
-            <!--th scope="row"></th-->
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-          </tr>
-          <tr>
-            <!--th scope="row"></th-->
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-            <td><p>Strawberries grow best from January to February</p></td>
-          </tr>
+      </td></tr>
       </tbody>
     </table>
-    <button class="btn btn-outline-default" onclick="window.location.href = 'calendar.html';">Go to Calendar</button>
-    <div style="display: none" id=sunflowerDetails>
-      <div class="card" onclick="sunflowerDetails()" style="width: 20rem;">
-        <img class="seed" src="assets/Sunflower.png" alt="Sunflower">
-        <div class="card-body">
-          <h5 class="card-title">Sunflower Seed</h5>
-          <p class="card-text">Sunflower seed details are in this text block Sunflower seed details are in this text block Sunflower seed details are in this text block Sunflower seed details are in this text block </p>
-          <a href="#" class="btn btn-primary">Plant</a>
+
+        <p>Garden Cost: <br>$9000.01</p>
+        <p>Total Seeds: <br>100</p>
+
+      </div>
+
+      <div class="col-sm-6 pt-3" style="text-align: center">
+        <canvas id='canvas' width='600' height='360' style="border: 1px solid black;">
+        </canvas>
+
+        <div id="seedcontainer" style="margin-top: 60px">
+        <div id="seeds" style="display: inline-block">
+          <img class="seed" src="assets/Daffodil.png" alt="Sunflower" id="plantDaffodil"  style="display: none;">
+          <img class="seed" src="assets/Dahlia.png" alt="Sunflower" id = "plantDahlia"  style="display: none;">
+          <img class="seed" src="assets/Rose.png" alt="Sunflower" id="plantRose"  style="display: none;">
+          <img class="seed" src="assets/Sunflower.png" alt="Sunflower" id="plantSunflower" style="display: none;">
+          <img class="seed" src="assets/Tulip.png" alt="Sunflower" id="plantTulip"  style="display: none;">
+      </div>
+      </div>
+
+      </div>
+
+      <div class="col-sm-4 pt-3" style="text-align: center;">
+        <div class="dropdown" style="display: inline-block">
+          <button class="btn btn-default dropdown-toggle" onclick="filter()" type="button" data-toggle="dropdown">
+            Seeds <span class="caret"></span>
+          </button>
+          <div id="seedDropdown" class="dropdown-content">
+            <input class="form-control" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href="#" onclick=sunflowerDetails()>Sunflower</a>
+            <a href="#" onclick=roseDetails()>Rose</a>
+            <a href="#" onclick=tulipDetails()>Tulip</a>
+            <a href="#" onclick=dahliaDetails()>Dahlia</a>
+            <a href="#" onclick=daffodilDetails()>Daffodil</a>
+          </div>
+        </div>
+
+
+        <table class="calendartable table-bordered" style="margin-top: 50px">
+          <tbody>
+            <tr>
+              <th colspan="4" style="text-align: center"><p>Calendar Reference</p></th>
+            </tr>
+            <tr>
+              <td><p>Jan-Mar</p></td>
+              <td><p>Apr-Jun</p></td>
+              <td><p>Jul-Sept</p></td>
+              <td><p>Oct-Dec</p></td>
+            </tr>
+            <tr>
+              <!--th scope="row"></th-->
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+            </tr>
+            <tr>
+              <!--th scope="row"></th-->
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+            </tr>
+            <tr>
+              <!--th scope="row"></th-->
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+              <td><p>Strawberries grow best from January to February</p></td>
+            </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-outline-default" onclick="window.location.href = 'calendar.html';">Go to Calendar</button>
+      <div style="display: none" id=sunflowerDetails>
+        <div class="card" onclick="sunflowerDetails()" style="width: 20rem;margin-left: auto;margin-right: auto">
+          <img src="assets/Sunflower.png" alt="Sunflower">
+          <div class="card-body">
+            <h5 class="card-title">Sunflower Seed</h5>
+            <p class="card-text">Sunflower seed details are in this text block Sunflower seed details are in this text block Sunflower seed details are in this text block Sunflower seed details are in this text block </p>
+            <a href="#" class="btn btn-primary" onclick="plantSunflower()">Plant</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: none" id=roseDetails>
+        <div class="card" onclick="roseDetails()" style="width: 20rem;margin-left: auto;margin-right: auto">
+          <img src="assets/Rose.png" alt="Rose">
+          <div class="card-body">
+            <h5 class="card-title">Rose Seed</h5>
+            <p class="card-text">Rose seed details are in this text block</p>
+            <a href="#" class="btn btn-primary" onclick="plantRose()">Plant</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: none" id=tulipDetails>
+        <div class="card" onclick="tulipDetails()" style="width: 20rem;margin-left: auto;margin-right: auto">
+          <img src="assets/Tulip.png" alt="Tulip">
+          <div class="card-body">
+            <h5 class="card-title">Tulip Seed</h5>
+            <p class="card-text">Tulip seed details are in this text block</p>
+            <a href="#" class="btn btn-primary" onclick="plantTulip()">Plant</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: none" id=dahliaDetails>
+        <div class="card" onclick="dahliaDetails()" style="width: 20rem;margin-left: auto;margin-right: auto">
+          <img src="assets/Dahlia.png" alt="Dahlia">
+          <div class="card-body">
+            <h5 class="card-title">Dahlia Seed</h5>
+            <p class="card-text">Dahlia seed details are in this text block</p>
+            <a href="#" class="btn btn-primary" onclick="plantDahlia()">Plant</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: none" id=daffodilDetails>
+        <div class="card" onclick="daffodilDetails()" style="width: 20rem;margin-left: auto;margin-right: auto">
+          <img src="assets/Daffodil.png" alt="Daffodil">
+          <div class="card-body">
+            <h5 class="card-title">Daffodil Seed</h5>
+            <p class="card-text">Daffodil seed details are in this text block</p>
+            <a href="#" class="btn btn-primary" onclick="plantDaffodil()">Plant</a>
+          </div>
         </div>
       </div>
     </div>
-    <div style="display: none" id=roseDetails>
-      <div class="card" onclick="roseDetails()" style="width: 20rem;">
-        <img class="seed" src="assets/Rose.png" alt="Rose">
-        <div class="card-body">
-          <h5 class="card-title">Rose Seed</h5>
-          <p class="card-text">Rose seed details are in this text block</p>
-          <a href="#" class="btn btn-primary">Plant</a>
-        </div>
-      </div>
-    </div>
-    <div style="display: none" id=tulipDetails>
-      <div class="card" onclick="tulipDetails()" style="width: 20rem;">
-        <img class="seed" src="assets/Tulip.png" alt="Rose">
-        <div class="card-body">
-          <h5 class="card-title">Tulip Seed</h5>
-          <p class="card-text">Tulip seed details are in this text block</p>
-          <a href="#" class="btn btn-primary">Plant</a>
-        </div>
-      </div>
-    </div>
-    <div style="display: none" id=dahliaDetails>
-      <div class="card" onclick="dahliaDetails()" style="width: 20rem;">
-        <img class="seed" src="assets/dahlia.png" alt="Rose">
-        <div class="card-body">
-          <h5 class="card-title">Dahlia Seed</h5>
-          <p class="card-text">Dahlia seed details are in this text block</p>
-          <a href="#" class="btn btn-primary">Plant</a>
-        </div>
-      </div>
-    </div>
-    <div style="display: none" id=daffodilDetails>
-      <div class="card" onclick="daffodilDetails()" style="width: 20rem;">
-        <img class="seed" src="assets/Daffodil.png" alt="Rose">
-        <div class="card-body">
-          <h5 class="card-title">Daffodil Seed</h5>
-          <p class="card-text">Daffodil seed details are in this text block</p>
-          <a href="#" class="btn btn-primary">Plant</a>
-        </div>
-      </div>
     </div>
   </div>
-  </div>
-</div>
-</body>
+  </body>
